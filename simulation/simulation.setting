@@ -1,0 +1,44 @@
+# input setting
+road_network = input/road_network.xml
+ground_truth = input/trees.csv
+satellite_map = 52.390, 52.365, 4.855, 4.890, 17, ams_test
+# satellite_map = 40.875, 40.700, -74.02, -73.91, 16, man
+# satellite_map = 52.43, 52.33, 4.75, 4.97, 16, ams
+
+# crowd sensing setting
+expected_workload = 500
+payment_per_workload = 0.01
+dropout_time = 1800
+
+# simulation setting
+worker_arrival_interval = 38
+# Manhattan
+# worker_level_distribution = 0.333, 0.333, 0.333
+# worker_exploring_time = 2.54, 3.88, 3.55
+# worker_labeling_time = 6.48, 7.98, 8.06
+# worker_labeling_recall = 0.332, 0.610, 0.849
+# worker_labeling_recall_std = 0.18, 0.19, 0.15
+# worker_labeling_precision = 0.352, 0.658, 0.793
+# worker_labeling_precision_std = 0.18, 0.16, 0.14
+# worker_labeling_error = 3.53, 3.41, 2.75
+# worker_labeling_error_std = 0.90, 0.60, 0.62
+# Amsterdam
+worker_arrival_interval = 38
+worker_level_distribution = 0.333, 0.333, 0.333
+worker_exploring_time = 3.21, 3.10, 2.97
+worker_labeling_time = 7.82, 9.25, 8.69
+worker_labeling_recall = 0.384, 0.644, 0.852
+worker_labeling_recall_std = 0.22, 0.21, 0.17
+worker_labeling_precision = 0.484, 0.813, 0.959
+worker_labeling_precision_std = 0.25, 0.17, 0.07
+worker_labeling_error = 3.36, 2.59, 2.26
+worker_labeling_error_std = 0.70, 0.74, 0.50
+
+# experimental setting
+task_assignment_strategy = multi_queue
+feedback_with_prediction = true
+prediction_with_satellite_map = false
+
+# output setting
+time_stamp = 1800
+output_properties = tree_cover, density, cost, worker_statistics

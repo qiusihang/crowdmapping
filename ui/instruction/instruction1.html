@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Task Instruction</title>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+
+            #frame {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                bottom: 20px;
+                right: 20px;
+            }
+            #title {
+                width: 100%;
+                color: #ffffff;
+                font-size: 24px;
+                font-family: "Arial";
+            }
+            .block {
+                width: 100%;
+                color: #ffffff;
+                font-size: 16px;
+                font-family: "Arial";
+            }
+            .image {
+                width: 100%;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="frame">
+            <div class="block"><b>1. Label the object. (1/3)</b><br><hr></div>
+            <div class="block">
+                Find the targeted object and move close to the it.
+                Click the  <span style="background-color:#FF0000;color:#ffffff">[&nbspLABEL&nbsp]</span>  button.</br>
+                First move the mouse to <span style="background-color:yellow;color:black">&nbsp;<b>the bottom of the object</b>&nbsp;</span>
+                (<b>it is the point where the object stands on the ground, and it determines the geo-location of the object</b>), then
+                <span style="background-color:yellow;color:black">
+                    &nbsp; click and drag the mouse <b><i>upwards</i></b> to draw the bounding box. &nbsp; 
+                </span>
+            </div>
+            <div class="image"></br><img src="label.gif"></img></div>
+        </div>
+    </body>
+</html>

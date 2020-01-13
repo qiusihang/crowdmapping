@@ -1,0 +1,5 @@
+[plain] view plaincopy
+*.DS_Store
+*__pycache__
+simulation/output
+simulation/ams_test*

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Task Instruction</title>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+
+            #frame {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                bottom: 20px;
+                right: 20px;
+            }
+            #title {
+                width: 100%;
+                color: #ffffff;
+                font-size: 24px;
+                font-family: "Arial";
+            }
+            .block {
+                width: 100%;
+                color: #ffffff;
+                font-size: 16px;
+                font-family: "Arial";
+            }
+            .image {
+                width: 100%;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="frame">
+            <div class="block"><b>1. Label the object. (3/3)</b><br><hr></div>
+            <div class="block">
+                The bounding box should cover the most part of the object
+                (<i>sometimes the bounding box is very difficult to cover the whole object due to the poit of view. In this case, please at least label the <b>bottom</b> of the object</i>).</br>
+                To ensure the accuracy, the system does not allow you to label the object too far away.
+            </div>
+            <div class="image"></br><img src="samples.png"></img></div>
+            <div class="block"></br>
+                You only need to label street trees belonging to the street that you are working on.
+            </div>
+        </div>
+    </body>
+</html>

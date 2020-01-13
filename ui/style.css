@@ -1,0 +1,420 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#street-view {
+    position:absolute;
+    top:10px;
+    left:10px;
+    height:480px;
+    width:640px;
+    border-radius:4px;
+}
+
+    #street-view-loading {
+        position:absolute;
+        height:100%;
+        width:100%;
+        text-align: center;
+        z-index:20;
+        background-color: #f2f2f2;
+        font-size: 20px;
+        font-family: "Arial";
+        border-radius:4px;
+    }
+
+    #street-view-canvas {
+        position:absolute;
+        top:1%;
+        left:1%;
+        z-index:0;
+        cursor: crosshair;
+    }
+
+    .label_button {
+        position:absolute;
+        bottom: 2%;
+        left: 270px;
+        width:150px;
+        z-index: 10;
+        background:#ff3300;
+        color: #fff;
+        text-align: center;
+        font-family: "Arial";
+        font-size: 20px;
+        box-shadow:0px 2px 6px rgba(0,0,0,0.12), 0px 1px 2px rgba(0,0,0,0.24);
+        transition:.2s ease-out;
+        border-radius:4px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .label_button:hover{
+        background:#ff6600;
+    }
+
+    .back_button {
+        position:absolute;
+        top: 2%;
+        left: 270px;
+        width:100px;
+        z-index: 0;
+        background:#666666;
+        color: #fff;
+        text-align: center;
+        font-family: "Arial";
+        font-size: 20px;
+        box-shadow:0px 2px 6px rgba(0,0,0,0.12), 0px 1px 2px rgba(0,0,0,0.24);
+        transition:.2s ease-out;
+        border-radius:4px;
+        cursor: pointer;
+    }
+
+    .back_button:hover{
+        background:#999999;
+    }
+
+
+#screenshotframe {
+    position: absolute;
+    top:10px;
+    left: 660px;
+    right: 10px;
+    bottom: 30px;
+}
+
+    #screenshots_title_text {
+        position:absolute;
+        top:15px;
+        line-height:0%;
+        width:100%;
+        text-align: center;
+        font-family: "Arial";
+        color: #ffffff;
+    }
+
+    #screenshots_title {
+        position:absolute;
+        height:30px;
+        width:100%;
+        background-color: #999999;
+        border-radius:4px;
+    }
+
+    #screenshots_background{
+        position:absolute;
+        top:35px;
+        left:0px;
+        right:0px;
+        bottom:30px;
+        background-color: #D9D9D9;
+        border-radius:4px;
+    }
+
+    #screenshots {
+        position:absolute;
+        top:40px;
+        left:5px;
+        right:5px;
+        bottom:35px;
+        background-color: #D9D9D9;
+        overflow:auto;
+    }
+
+    .item_pic {
+        height:50px;
+        background-color: #ffffff;
+    }
+
+    .item_text {
+        height:50px;
+        background-color: #f2f2f2;
+        font-family: "Arial";
+        font-size: 12px;
+    }
+
+    #submit_button {
+        position:absolute;
+        bottom:0px;
+        height:24px;
+        width:100%;
+        background:#666666;
+        color: #fff;
+        text-align: center;
+        font-family: "Arial";
+        font-size: 20px;
+        box-shadow:0px 2px 6px rgba(0,0,0,0.12), 0px 1px 2px rgba(0,0,0,0.24);
+        transition:.2s ease-out;
+        border-radius:4px;
+        cursor: pointer;
+    }
+
+    #submit_button:hover{
+        background:#999999;
+    }
+
+
+#map {
+    position:absolute;
+    top: 500px;
+    left:10px;
+    bottom:30px;
+    width:320px;
+    border-radius:4px;
+}
+
+    #map-cover {
+        position:absolute;
+        top: 500px;
+        left:10px;
+        bottom:30px;
+        width:320px;
+        z-index: 10;
+        border-radius:4px;
+    }
+
+        #legend {
+            position:absolute;
+            top: 10px;
+            left:10px;
+            z-index: 10;
+            font-family: Arial;
+            font-size: 12px;
+            background-color: #f2f2f2;
+            border-radius:4px;
+        }
+
+#uoa-control {
+    position:absolute;
+    top: 500px;
+    left:340px;
+    height: 25px;
+    width:310px;
+    background-color: #AED6F1;
+    box-shadow:0px 2px 6px rgba(0,0,0,0.12), 0px 1px 2px rgba(0,0,0,0.24);
+    border-radius:4px;
+}
+    .uoa-button {
+        height:25px;
+        background: #21618C;
+        color: #ffffff;
+        text-align: center;
+        font-family: "Arial";
+        font-size: 11px;
+        box-shadow:0px 2px 6px rgba(0,0,0,0.12), 0px 1px 2px rgba(0,0,0,0.24);
+        transition:.2s ease-out;
+        border-radius:4px;
+        cursor: pointer;
+    }
+
+    .uoa-button:hover{
+        background: #3498DB;
+    }
+
+    #next-uoa {
+        position:absolute;
+        top: 0px;
+        right: 0px;
+        width:100px;
+    }
+
+    #previous-uoa {
+        position:absolute;
+        top: 0px;
+        left: 0px;
+        width:100px;
+    }
+
+    #uoa-condition {
+        position:absolute;
+        top: 2px;
+        text-align: center;
+        font-family: "Arial";
+        font-size: 20px;
+        height: 25px;
+        left: 105px;
+        width:100px;
+    }
+
+#instructions {
+    position:absolute;
+    top: 535px;
+    left:340px;
+    bottom:30px;
+    width:310px;
+    background-color: #D9D9D9;
+    border-radius:4px;
+}
+
+    #instructionstitle {
+        position:absolute;
+        top: 5px;
+        left: 5px;
+        height: 18px;
+        font-size: 14px;
+        font-family: "Arial";
+    }
+
+    #instructionscontent-background {
+        position:absolute;
+        top: 28px;
+        left: 5px;
+        right: 5px;
+        bottom: 30px;
+        background-color: #f2f2f2;
+        border-radius:4px;
+    }
+
+        #instructionscontent {
+            position:absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            overflow:auto;
+            font-size: 12px;
+            text-align: justify;
+            font-family: "Arial";
+        }
+
+    #progress {
+        position:absolute;
+        height: 20px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        background-color: #ffffff;
+        border-radius:4px;
+    }
+
+        #progress-bar {
+            position:absolute;
+            top: 2px;
+            left: 2px;
+            right: 200px;
+            bottom: 2px;
+            background-color: #00cc00;
+            border-radius:4px;
+        }
+
+        #progress-percentage {
+            position:absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            text-align: center;
+            font-size: 14px;
+            color:#4d4d4d;
+            font-family: "Arial";
+        }
+
+#warning {
+    position:absolute;
+    height:20px;
+    left:10px;
+    bottom:0px;
+    overflow:auto;
+    font-size: 12px;
+    text-align: justify;
+    font-family: "Arial";
+}
+
+#tutorial {
+    position:absolute;
+    top: 50px;
+    left: 100px;
+    right: 100px;
+    bottom: 100px;
+    z-index: 20;
+    border-radius:8px;
+    background-color: rgba(0,0,0,0.85)
+}
+
+    #tutorial_content {
+        position: absolute;
+        top:10px;
+        left:0px;
+        width:100%;
+        height:90%;
+        overflow:auto;
+    }
+    #tutorial-close {
+        position: absolute;
+        top:10px;
+        right:10px;
+        height:10px;
+        width:10px;
+        border-radius: 5px;
+        background-color: #cc0000;
+        cursor: pointer;
+    }#tutorial-close:hover {background-color: #ff0000;}
+    #tutorial-buttons {
+        position: absolute;
+        text-align: center;
+        bottom:10px;
+        left:150px;
+        right:150px;
+        height:20px;
+    }
+        #previous_tutorial {
+            position:absolute;
+            width: 40%;
+            left:0%;
+            font-size: 16px;
+            cursor: pointer;
+            color: #f2f2f2;
+            text-align: center;
+            font-family: "Arial";
+            border-radius: 4px;
+            background-color: #666666;
+        }
+        #previous_tutorial:hover{
+            background:#999999;
+        }
+        #progress-tutorial {
+            position:absolute;
+            width:20%;
+            left:40%;
+            font-size: 16px;
+            cursor: pointer;
+            color: #f2f2f2;
+            text-align: center;
+            font-family: "Arial";
+        }
+        #next_tutorial {
+            position:absolute;
+            width: 40%;
+            left:60%;
+            font-size: 16px;
+            cursor: pointer;
+            color: #f2f2f2;
+            text-align: center;
+            font-family: "Arial";
+            border-radius: 4px;
+            background-color: #666666;
+        }
+        #next_tutorial:hover{
+            background:#999999;
+        }
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 5px solid #D9D9D9;
+}

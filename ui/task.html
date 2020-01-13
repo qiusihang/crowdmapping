@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Crowdmapping with Street View</title>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body bgcolor="#ffffff">
+        <div id="street-view">
+            <!--<img style="position:absolute;left:0;right:0;top:0:bottom:0;z-index:10;" src="figs/mockup.png">-->
+            <div id="label" class="noselect label_button">ANNOTATE</div>
+            <div id="back" class="noselect back_button">BACK</div>
+            <div id="street-view-loading"><br/><br/><br/><br/>Loading tasks...</div>
+        </div>
+        <canvas id="street-view-canvas">Your browser does not support this function.</canvas>
+        <div id="screenshotframe">
+            <div id="screenshots_title"></div>
+            <div id="screenshots_title_text">ANNOTATION LIST</div>
+            <div id="screenshots_background"></div>
+            <div id="screenshots"></div>
+            <div id="submit_button" class="noselect" onclick="post_data()">SUBMIT</div>
+        </div>
+        <div id="map"></div>
+        <div id="map-cover">
+            <!--<img style="position:absolute;height:100%;witdh:100%;z-index:50;border-radius:4px;" src="figs/mockup2.png">-->
+            <div id="legend">
+                <span style="color:#ff0000;"><b>&nbsp;&nbsp;&bull;&nbsp;</b></span>footprints&nbsp;&nbsp;<br/>
+                <span style="color:#00cc00;"><b>&nbsp;&nbsp;&bull;&nbsp;</b></span>annotations&nbsp;&nbsp;
+            </div>
+        </div>
+        <div id="instructions">
+            <div id="instructionstitle"><b>Task Description</b></div>
+            <div id="instructionscontent-background">
+                <div id="instructionscontent">
+                    You need to find and annotate street trees in this task.
+                    Click <span onclick="show_instruction()" style="cursor: pointer"><b>[HERE]</b></span> if you want to read the Task Instruction again.
+                    <p>Press <span style="background-color:#FF0000;color:#ffffff">&nbsp;ANNOTATE&nbsp;</span> button to draw a bounding box on the targeted object.</p>
+                    <p>Press <span style="background-color:#21618C;color:#ffffff">&nbsp;PREVIOUS SEGMENT&nbsp;</span> or
+                          <span style="background-color:#21618C;color:#ffffff">&nbsp;NEXT SEGMENT&nbsp;</span> to switch the working street.</p>
+                    <p>Press <span style="background-color:#666666;color:#ffffff">&nbsp;SUBMIT&nbsp;</span> button to submit the list of objects.</p>
+                </div>
+            </div>
+            <div id="progress">
+                <div id="progress-bar"></div>
+                <div id="progress-percentage">100%</div>
+            </div>
+        </div>
+        <div id="uoa-control">
+            <div id="uoa-condition">1/1</div>
+            <div id="next-uoa" class="noselect uoa-button">NEXT<br/>SEGMENT</div>
+            <div id="previous-uoa" class="noselect uoa-button">PREVIOUS<br/>SEGMENT</div>
+        </div>
+        <div id="warning"></div>
+        <div id="tutorial">
+            <object id="tutorial_content" type="text/html" data="instruction/instruction0.html"></object>
+            <div id="tutorial-buttons">
+                <div id="previous_tutorial" class="noselect" onclick="previous_instruction()">&#8592;</div>
+                <div id="progress-tutorial">0/7</div>
+                <div id="next_tutorial" class="noselect" onclick="next_instruction()">&#8594;</div>
+            </div>
+            <div id="tutorial-close" onclick="close_instruction()"></div>
+        </div>
+        <iframe name="hidden_frame" id="hidden_frame" style="display:none;"></iframe>
+        <script src="vcs.js"> </script>
+        <script src="raycast.js"> </script>
+        <script src="jquery.js"></script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7MIhe-OZEx4An2EQKAmVVwKCR6VMqQQA&callback=initialize">
+        </script>
+    </body>
+</html>
